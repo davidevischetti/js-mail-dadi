@@ -12,6 +12,7 @@ function () {
 
     let checkEmail = false;
     
+    //VERIFICO CHE LA EMAIL SIA PRESENTE NELL'ELENCO
     for (let i = 0; i < emailList.length; i++) {
 
         if (myEmail == emailList[i]) {
@@ -21,13 +22,10 @@ function () {
 
     let message = document.getElementById('welcome');
 
+    //CONFERMO ALL'UTENTE LA POSSIBILITA DI POTER ACCEDERE O MENO
     if (checkEmail == true) {
         message.innerHTML = `Hello ${myEmail}, you're welcome!`;
-        console.log('wewe');
     } else {
         message.innerHTML = `I'm sorry ${myEmail}, you're not welcome!`;
-        console.log('caca');
     }
 });
-
-
